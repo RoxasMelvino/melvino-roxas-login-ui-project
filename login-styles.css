@@ -1,24 +1,15 @@
-/* 
-Color pallete for this website
-#F1F7ED: Mint Cream
-#243E36: Dark slate gray
-#7CA982: Cambridge Blue
-#EOEEC6: Nyanza
-#D3C073: Citron
- */
-
-
-
 body {
+    background: url(https://4kwallpapers.com/images/wallpapers/fluidic-glossy-gradient-background-purple-background-1920x1080-7641.jpg);
      height: 100vh;
      display: flex;
      justify-content: center;
      align-items: center;
-     font-family: Arial, Helvetica, sans-serif;
+     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serifq
     }
 
 .container {
     /* border: 2px solid gray; */
+    background-color: #FFFFFF;
     min-width: 40vw;
     min-height: 55vh;
     display: flex;
@@ -26,40 +17,56 @@ body {
     justify-content: space-evenly;
     align-items: center;
     border-radius: 30px;
-    box-shadow: 10px 5px 15px rgba(0,0,0,0.19), -10px -5px 15px rgba(0,0,0,0.19)
+    box-shadow: 15px 10px 15px rgba(0,0,0,0.19), -15px -10px 15px rgba(0,0,0,0.19)
 }
 
 
 .sign-in {
     font-size: 2.5em;
+    font-weight: 900;
 }
 
-#user-password, #username {
+.username-box, .password-box {
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+
+}
+
+label {
+    height: 3vh;
+}
+
+#username, #user-password {
     border: none;
     outline: none;
-    border-bottom: 2px solid black;
-    
+    width: 20vw;
+    height: 3vh;
+    border: 2px solid #F7567C;
+    border-radius: 10px
 }
 
+
 #user-password::placeholder, #username::placeholder {
+    position: relative;
+    left: 10px;
     font-size: 1.2em;
-    color: #243E36;
+    color: gray;
 }
 
 input[type="submit"] {
     border: none;
-    outline: none;
-    background-color: #D3C073;
+    background: linear-gradient(90deg, #5dd9c1, #F7567C, #5F00BA );
+    color: white;
     min-width: 10vw;
     min-height: 5vh;
-    border-radius: 10px;
-    
+    border-radius: 25px;
 }
 
 input[type="submit"]:hover {
     animation-name: expand;
     animation-duration: 500ms;
-    animation-fill-mode: forwards;
+    animation-fill-mode: forwards; 
 }
 
 @keyframes expand {
