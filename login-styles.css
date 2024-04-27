@@ -1,36 +1,72 @@
 /* 
-Requirements:
-The login box must be centered in the screen and stay in the center of the screen even as you resize the web-browser window.
-You must use flexbox properties to achieve this, not margin, padding, or position.
-The login box should have a minimum size, and the input fields or text in the box should not leak out of the box.
-The login box should have box-shadow and rounded edges.
-The login box should have a username and password input field, with placeholder text like in the photo.
-The text entered into the password field must be hidden (with asterisks or circles)
-The login box should have a button.
-
-EXTRA CREDIT AND PRACTICE:
-Pictures as backgrounds or part of the Login UI
-Other Designs for Logins
-Additional design features to the login box
-Experiment with colors if you would like, feel free to use the color palette generato
+Color pallete for this website
+#F1F7ED: Mint Cream
+#243E36: Dark slate gray
+#7CA982: Cambridge Blue
+#EOEEC6: Nyanza
+#D3C073: Citron
  */
 
- 
- body {
+
+
+body {
      height: 100vh;
      display: flex;
      justify-content: center;
      align-items: center;
+     font-family: Arial, Helvetica, sans-serif;
     }
 
 .container {
-    border: 2px solid gray;
+    /* border: 2px solid gray; */
     min-width: 40vw;
     min-height: 55vh;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    border-radius: 10%;
-    box-shadow: 10px 5px 5px black;
+    border-radius: 30px;
+    box-shadow: 10px 5px 15px rgba(0,0,0,0.19), -10px -5px 15px rgba(0,0,0,0.19)
 }
+
+
+.sign-in {
+    font-size: 2.5em;
+}
+
+#user-password, #username {
+    border: none;
+    outline: none;
+    border-bottom: 2px solid black;
+    
+}
+
+#user-password::placeholder, #username::placeholder {
+    font-size: 1.2em;
+    color: #243E36;
+}
+
+input[type="submit"] {
+    border: none;
+    outline: none;
+    background-color: #D3C073;
+    min-width: 10vw;
+    min-height: 5vh;
+    border-radius: 10px;
+    
+}
+
+input[type="submit"]:hover {
+    animation-name: expand;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes expand {
+    100% {
+        transform: scale(1.2)
+    }
+}
+
+
+
