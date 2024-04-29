@@ -4,14 +4,16 @@ body {
      display: flex;
      justify-content: center;
      align-items: center;
-     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serifq
+     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
     }
 
 .container {
     /* border: 2px solid gray; */
     background-color: #FFFFFF;
+    width: 40vw;
+    height: 55vh;
     min-width: 40vw;
-    min-height: 55vh;
+    max-width: 45vw;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -30,7 +32,6 @@ body {
     width: 20vw;
     display: flex;
     flex-direction: column;
-
 }
 
 label {
@@ -42,14 +43,11 @@ label {
     outline: none;
     width: 20vw;
     height: 3vh;
-    border: 2px solid #F7567C;
-    border-radius: 10px
+    border-bottom: 2px solid #F7567C;
 }
 
 
 #user-password::placeholder, #username::placeholder {
-    position: relative;
-    left: 10px;
     font-size: 1.2em;
     color: gray;
 }
@@ -76,4 +74,16 @@ input[type="submit"]:hover {
 }
 
 
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
 
+    .username-box, .password-box {
+        width: 90%;
+    }
+
+    #username, #user-password {
+        width: 90%;
+    }
+}
