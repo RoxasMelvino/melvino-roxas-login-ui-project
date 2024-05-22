@@ -4,33 +4,39 @@
         <meta charset="UTF-8">
         <title>Melvino's Login UI Project</title>
         <link href="login-styles.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
 
     <body>
         
-        <div class="container">
-
-            <div class="sign-in">Welcome Back</div>
-            
-            <div class="email-box">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="example123@domain.com" required>
+        <main>
+            <div class="container">
+                <div class="sign-in">Become a Member</div>
+                <div class="email-box">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="example123@domain.com" required>
+                </div>
+                <div class="username-box">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" placeholder="Enter your username" required>
+                </div>
+                <div class="password-box">
+                    <label for="user-password">Password</label>
+                    <input type="password" id="user-password" name="password" placeholder="Enter your password" required>
+                </div>
+                <div class="register-button">
+                    <label for="register-button"><input type="submit" id="register-button" value="Register"></label>
+                </div>
+                <p>Or</p>
+                <div class="register-options">
+                    <i class="fa-brands fa-google"></i>
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-apple"></i>
+                </div>
             </div>
 
-            <div class="username-box">
-                <label for="username">Username</label>
-                <input type="text" id="username" name="username" placeholder="Enter your username" required>
-            </div>
-
-            <div class="password-box">
-                <label for="user-password">Password</label>
-                <input type="password" id="user-password" name="password" placeholder="Enter your password" required>
-            </div>
-
-            <div class="sign-in-button">
-                <label for="sign-in-button"><input type="submit" id="sign-in-button" name="login-button" value="Sign In"></label>
-            </div>
-        </div>
+            <img src="https://images.unsplash.com/photo-1589579234096-25cb6b83e021?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjh8fHdlaWdodHN8ZW58MHx8MHx8fDA%3D" alt="picture of barbell with weights">
+            </main>
     </body>
 </html>
