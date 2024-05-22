@@ -10,16 +10,18 @@ body {
 .container {
     background-color: #FFFFFF;
     width: 40vw;
+    min-width: 600px;
     height: 55vh;
-    min-width: 40vw;
-    max-width: 45vw;
+    min-height: 300px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    padding: 20px;
     border-radius: 30px;
     box-shadow: 15px 10px 15px rgba(0,0,0,0.19), -15px -10px 15px rgba(0,0,0,0.19)
 }
+
 
 /* Changes size of "Sign In" text on top of container */
 .sign-in {
@@ -28,7 +30,7 @@ body {
 }
 
 /* Adding flexbox to these classes which contain the inputs */
-.username-box, .password-box {
+.username-box, .password-box, .email-box {
     width: 20vw;
     display: flex;
     flex-direction: column;
@@ -38,19 +40,23 @@ body {
 /* This is done so the label isn't too close to the input box */
 label {
     height: 3vh;
+    min-height: 20px;
 }
 
 /* Removed default styling of the inputs and added better styling */
-#username, #user-password {
+#username, #user-password, #email {
     border: none;
     outline: none;
     width: 20vw;
     height: 3vh;
-    border-bottom: 2px solid #F7567C;
+    /* border-bottom: 2px solid #F7567C; */
+    background-color: #C2D3CD;
+    border-radius: 10px;
+    padding: 5px;
 }
 
 /* Made the placeholder bigger */
-#user-password::placeholder, #username::placeholder {
+#user-password::placeholder, #username::placeholder, #email::placeholder {
     font-size: 1.2em;
     color: gray;
 }
@@ -60,8 +66,10 @@ input[type="submit"] {
     border: none;
     background: linear-gradient(90deg, #5dd9c1, #F7567C, #5F00BA );
     color: white;
-    min-width: 10vw;
-    min-height: 5vh;
+    width: 100px;
+    height: 50px;
+    min-width: 75px;
+    min-height: 50px;
     border-radius: 25px;
 }
 
@@ -78,17 +86,20 @@ input[type="submit"]:hover {
     }
 }
 
-/* media queries for table screens and lower */
+/* media queries for tablet screens and lower */
 @media screen and (max-width: 768px) {
     .container {
+        width: 65vw;
+        min-width: 350px;
+    }
+
+    .username-box, .password-box, .email-box {
+        width: 55vw;
+        min-width: 250px;
+    }
+
+    #username, #user-password, #email {
         width: 90%;
     }
 
-    .username-box, .password-box {
-        width: 90%;
-    }
-
-    #username, #user-password {
-        width: 90%;
-    }
 }
